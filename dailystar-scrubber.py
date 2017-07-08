@@ -49,7 +49,7 @@ if not os.path.exists(output_file):
 #             f.close
 #     else: pass 
 
-for index in range(1,100,1):
+for index in range(1,3700,1):
     print '--------------------'
     print 'checking page: {id}'.format(id=index)
     print '--------------------'
