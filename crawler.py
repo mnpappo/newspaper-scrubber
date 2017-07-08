@@ -12,8 +12,8 @@ newspaper_base_url = 'http://www.prothom-alo.com/'
 newspaper_archive_base_url = 'http://www.prothom-alo.com/archive/'
 
 # set the starting and ending date to crawl
-start_date = date(2014, 1, 12)
-end_date = date(2014, 6, 30)
+start_date = date(2017, 3, 1)
+end_date = date(2017, 5, 30)
 delta = end_date - start_date
 
 output_dir = './data-{}-{}'.format(start_date, end_date)
@@ -58,7 +58,7 @@ for i in range(delta.days + 1):
                             download_by_url = urllib.URLopener()
                             download_by_url.retrieve(url=image_url, filename=output_dir+'/'+image_name)
                             result = [image_name, caption]
-                            with open("Output.csv", "ab") as f:
+                            with open(output_dir + ".csv", "ab") as f:
                                 writeFile = csv.writer(f)
                                 writeFile.writerow(result)
                             image_index += 1
